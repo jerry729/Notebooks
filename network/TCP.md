@@ -125,7 +125,7 @@ TCP首部有个字段专门通知窗口大小
 将拥塞窗口的大小与接收端主机通知的窗口大小做比较，然后按照它们当中较小的那个值，发送比其还要小的数据量
 
 慢启动阀值，当拥塞窗口大小超过阀值，则在每一次收到确认应答时，以以下比例放大拥塞窗口
-  ![](https://latex.codecogs.com/svg.latex?\frac{the\quad%20number\quad%20of\quad%20bytes\quad%20of\quad%20a\quad%20data\quad%20seg}{congestion\quad%20window\quadbyte}\times%20the\quad%20number\quad%20of%20\quad%20bytes\quad%20of\quad%20a\quad%20data\quad%20seg)
+  ![](https://latex.codecogs.com/svg.latex?\frac{bytesNum}{congestionWindowsNum}\times%20bytesNum)
 TCP刚开始通信时并没有设置相应的慢启动阀值（与窗口的最大值相同），而是在超时重发时才会设置为当时拥塞窗口的一半大小
 
 
