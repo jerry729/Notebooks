@@ -1,5 +1,3 @@
-<img src="http://latex.codecogs.com/svg.latex?\frac{\partial J}{\partial \theta_k^{(j)}}=\sum_{i:r(i,j)=1}{\big((\theta^{(j)})^Tx^{(i)}-y^{(i,j)}\big)x_k^{(i)}}+\lambda \theta_k^{(j)}" />
-
 # TCP
 
 1. 面向连接
@@ -127,9 +125,7 @@ TCP首部有个字段专门通知窗口大小
 将拥塞窗口的大小与接收端主机通知的窗口大小做比较，然后按照它们当中较小的那个值，发送比其还要小的数据量
 
 慢启动阀值，当拥塞窗口大小超过阀值，则在每一次收到确认应答时，以以下比例放大拥塞窗口
-$$
-\frac{1个数据段的字节数}{拥塞窗口（字节）}\times 1个数据段字节数
-$$
+  ![](https://latex.codecogs.com/svg.latex?\frac{the\quad%20number\quad%20of\quad%20bytes\quad%20of\quad%20a\quad%20data\quad%20seg}{congestion\quad%20window\quadbyte}\times%20the\quad%20number\quad%20of%20\quad%20bytes\quad%20of\quad%20a\quad%20data\quad%20seg)
 TCP刚开始通信时并没有设置相应的慢启动阀值（与窗口的最大值相同），而是在超时重发时才会设置为当时拥塞窗口的一半大小
 
 
@@ -275,10 +271,7 @@ Checksum则进行路由器内存故障或程序漏洞导致的数据破坏的检
 ## 窗口大小与吞吐量
 
 TCP通信最大吞吐量由窗口大小和往返时间决定。
-$$
-假定最大吞吐量为T_{max}, 窗口大小为W, 往返时间是RTT,那么最大吞吐量:\\
-T_{max} = \frac{W(bit)}{RTT(s)}\\
-$$
+![](https://latex.codecogs.com/svg.latex?T_{max}%20=%20\frac{W(bit)}{RTT(s))
 表示1个TCP连接所能传输的最大吞吐量，建立两个以上连接同时传输时，表示每个连接的最大吞吐量
 
 所以TCP中勇夺个连接传输数据会有更高的网络吞吐量，Web一般同时建立4个左右连接
